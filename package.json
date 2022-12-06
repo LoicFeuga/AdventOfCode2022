@@ -1,0 +1,30 @@
+{
+  "name": "starter-node-ts",
+  "version": "1.0.0",
+  "description": "Starter project to begin a project using node with typescript instead of javascript",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./dist/6decembre/index2.js",
+    "tsc": "nodemon -e ts --exec tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoicFeuga/starter-node-ts.git"
+  },
+  "author": "Loïc Feuga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LoicFeuga/starter-node-ts/issues"
+  },
+  "homepage": "https://github.com/LoicFeuga/starter-node-ts#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.11",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "file-system": "^2.2.2",
+    "path": "^0.12.7"
+  }
+}
