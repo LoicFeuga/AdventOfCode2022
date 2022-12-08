@@ -68,6 +68,9 @@ function calculVisible(grid: Array<any>){
         for(let j = 0; j < grid[i].length; j++){
             if(grid[i][j].visible) {
                 count++;
+                // grid[i][j].value = '.';
+            }else {
+
                 grid[i][j].value = '.';
             }
         }
