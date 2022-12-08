@@ -1,15 +1,9 @@
 import * as fs from 'fs';
 import * as path from 'path';
+import {Signe} from "./signe.model";
 
 let inputFile = fs.readFileSync(path.resolve('./data/input2.txt'), {encoding: 'utf-8'});
 let tab = inputFile.split('\n');
-
-enum Signe {
-    "Rock",
-    "Paper",
-    "Scissors"
-}
-
 
 class Round {
     adv: Signe;
