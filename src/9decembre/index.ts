@@ -1,10 +1,8 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import {Corde} from "./corde.model";
-import {Point} from "./point.model";
-import {Grid} from "./grid.model";
+import {Grid} from "./grid2.model";
 
-let inputFile = fs.readFileSync(path.resolve('./data/input9.txt'), {encoding: 'utf-8'});
+let inputFile = fs.readFileSync(path.resolve('./data/input9easy2.txt'), {encoding: 'utf-8'});
 let tab = inputFile.split('\n');
 tab = tab.splice(0, tab.length - 1);
 
