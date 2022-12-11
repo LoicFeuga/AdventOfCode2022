@@ -2,11 +2,12 @@
   "name": "starter-node-ts",
   "version": "1.0.0",
   "description": "Starter project to begin a project using node with typescript instead of javascript",
-  "main": "index.ts",
+  "main": "src/11decembre/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./dist/10decembre/index.js",
-    "tsc": "nodemon -e ts --exec tsc"
+    "tsc": "nodemon -e ts --exec tsc",
+    "start": "nodemon",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
