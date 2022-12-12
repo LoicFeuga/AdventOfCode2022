@@ -28,7 +28,7 @@ export class Parser {
                 monkeyEnCours = true;
             } else {
                 if (t.includes('Starting items')) {
-                    let items = t.split('Starting items: ')[1].split(',').map(c => +(c));
+                    let items = t.split('Starting items: ')[1].split(',').map(c => (+(c)));
                     monkey.items = [...items];
 
                 }
