@@ -10,33 +10,29 @@ tab = tab.splice(0, tab.length -1);
 let parser = new Parser(tab);
 let grid = new Grid(parser.output);
 
-// Grid.brain.push({
-//     distance:10000,
-//     tab:[]
-// })
-Grid.brain.push(JSON.parse(bra));
+
 
 let max = 0;
-for (let i = 0; !grid.ending; i++) {
-    grid.nextMove();
+// for (let i = 0; !grid.ending; i++) {
+//     grid.nextMove();
+//
+//
+//     if(grid.restart) {
+//         // max = max > grid.step ? max : grid.step;
+//         // console.log(max);
+//         grid.render();
+//         grid.clear();
+//
+//         parser = new Parser(tab);
+//         grid = new Grid(parser.output);
+//         Grid.brain.push({
+//             distance:10000,
+//             tab:[]
+//         })
+//         // console.log(Grid.brain);
+//
+//         grid.restart = false;
+//     }
+// }
 
-
-    if(grid.restart) {
-        // max = max > grid.step ? max : grid.step;
-        // console.log(max);
-        grid.render();
-        grid.clear();
-        
-        parser = new Parser(tab);
-        grid = new Grid(parser.output);
-        Grid.brain.push({
-            distance:10000,
-            tab:[]
-        })
-        // console.log(Grid.brain);
-        
-        grid.restart = false;
-    }
-}
-
-grid.render();
+// grid.render();
