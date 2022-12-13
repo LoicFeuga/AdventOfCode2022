@@ -1,5 +1,6 @@
 import {Point} from "./point.model";
 import {XY} from "./xy.model";
+import * as fs from 'fs';
 
 export class Grid {
     static try = 0;
@@ -41,19 +42,22 @@ export class Grid {
             c = this.getRandomInt(moves.length);
             let cBefore = c;
 
-            if (Grid.try > 10000) {
+            // if (Grid.try > 1000) {
                 let a = [...Grid.brain].sort((a, b) => {
                     return a.distance < b.distance ? -1 : 1
                 });
                 if (a.length > (this.step)) {
                     c = a[0].tab[this.step];
                 }
-                if ((this.step + 50) > a[0].tab.length) {
+                if ((this.step + 30) > a[0].tab.length) {
+
+                    // fs.writeFileSync('./a.json',JSON.stringify(a[0]));
                     c = this.getRandomInt(moves.length);
                 }
-            } else {
+            // }
+                // else {
 
-            }
+            // }
         } else {
             moves = [endMove];
             c = 0;
@@ -64,7 +68,7 @@ export class Grid {
             this.i = moves[c]!.i;
             this.j = moves[c]!.j;
             Grid.brain[Grid.try].tab.push(c);
-            Grid.brain[Grid.try].distance = (this.eI - this.i) + (10 * (this.eJ - this.j));
+            Grid.brain[Grid.try].distance = (this.eI - this.i) + ( (this.eJ - this.j));
             this.map[this.i][this.j].visited = true;
             this.step++;
         } else {
